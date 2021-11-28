@@ -15,7 +15,7 @@ jobs:
           path: |
             '**/node_modules'
             '**/workspaces/minimal-blog/.cache'
-          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}-${{ hashFiles('**/workspaces/minimal-blog/.cache') }}
 
       - name: Install
         run: yarn install --frozen-lockfile --quiet
