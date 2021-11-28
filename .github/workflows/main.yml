@@ -14,7 +14,7 @@ jobs:
         with:
           path: |
             '**/node_modules'
-            '**/.cache'
+            '**/workspaces/minimal-blog/.cache'
           key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
 
       - name: Install
