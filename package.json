@@ -1,0 +1,9 @@
+{
+   "private": true,
+   "name": "docker-actions-caching",
+   "workspaces": ["workspaces/*"],
+   "scripts": {
+     "build": "yarn --cwd workspaces/minimal-blog build",
+     "clean": "yarn --cwd workspaces/minimal-blog clean"
+   }
+}
