@@ -22,7 +22,7 @@ jobs:
         run: docker save my-site > /tmp/layers.tar
 
       - name: Cache
-        run: actions/cache@v2
+        uses: actions/cache@v2
         with:
           path: /tmp/layers.tar
           key: ${{ runner.os }}-${{ hashFiles('**/cache') }}
